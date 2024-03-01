@@ -14,35 +14,31 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
-        <h1 className="text-3xl font-semibold text-center text-gray-300">
+    <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-white">
+      <div className="w-full p-6 rounded-lg shadow-md bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
+        <h1 className="text-3xl font-semibold text-center text-gray-500">
           Login
-          <span className="text-blue-500"> ChatApp</span>
+          <span className="text-indigo-500"> Chat</span>
         </h1>
 
         <form onSubmit={handleSubmit}>
           <div>
-            <label className="label p-2">
-              <span className="text-base label-text">Username</span>
-            </label>
+            <label className="label p-2"></label>
             <input
               type="text"
               placeholder="Enter username"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 bg-white text-black"
               value={username}
               onChange={e => setUsername(e.target.value)}
             />
           </div>
 
           <div>
-            <label className="label">
-              <span className="text-base label-text">Password</span>
-            </label>
+            <label className="label"></label>
             <input
               type="password"
               placeholder="Enter Password"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 bg-white text-black"
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
@@ -55,7 +51,10 @@ const Login = () => {
           </Link>
 
           <div>
-            <button className="btn btn-block btn-sm mt-2" disabled={loading}>
+            <button
+              className="btn btn-block btn-sm mt-2 bg-indigo-500 text-white"
+              disabled={loading}
+            >
               {loading ? (
                 <span className="loading loading-spinner "></span>
               ) : (
